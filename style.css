@@ -1,0 +1,259 @@
+:root {
+    --bg-color: #0b1120;
+    --card-bg: #0f172a;
+    --border-color: #1e3a8a;
+    --glow-color: #3b82f6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 50%, #1e3a8a22 0%, #0b1120 100%);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.tech-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), inset 0 0 10px rgba(59, 130, 246, 0.05);
+}
+
+.form-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    background-color: #00000044;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 12px 40px 12px 16px;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--glow-color);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.icon {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.toggle-btn {
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    color: var(--text-primary);
+}
+
+.feedback {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    height: 14px;
+}
+
+.password-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.password-header label {
+    margin-bottom: 0;
+}
+
+.strength-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.strength-meter {
+    height: 4px;
+    background-color: #1e293b;
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+}
+
+.glow-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--glow-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 12px;
+}
+
+.glow-btn:hover {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+    transform: translateY(-1px);
+}
+
+.glow-btn.outline {
+    background-color: transparent;
+    border: 1px solid var(--glow-color);
+    color: var(--glow-color);
+}
+
+.glow-btn.outline:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: center;
+    gap: 8px;
+}
+
+.checkbox-group input {
+    accent-color: var(--glow-color);
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin: 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.switch-form a {
+    color: var(--glow-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard / Logout styling */
+#logout-section {
+    width: 500px;
+}
+
+.dashboard-layout {
+    display: flex;
+    gap: 24px;
+}
+
+.user-profile {
+    flex: 1;
+    background-color: #1e293b55;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+.avatar {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.user-profile h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.user-profile small {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.session-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.session-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.session-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}

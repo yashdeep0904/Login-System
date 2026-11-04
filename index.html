@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Tech Auth System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Sign Up Interface -->
+        <div id="signup-section" class="tech-card hidden">
+            <h2 class="form-title">Create Account</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="signup-email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="signup-password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="sign-up-btn" class="glow-btn">Initialize Account</button>
+                
+                <p class="switch-form">
+                    Already have an access key? <a href="#" id="go-to-login">Sign in</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Login Interface -->
+        <div id="login-section" class="tech-card">
+            <h2 class="form-title">System Access</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <span id="email-icon" class="icon status-icon"></span>
+                    </div>
+                    <small id="email-feedback" class="feedback"></small>
+                </div>
+
+                <div class="input-group">
+                    <div class="password-header">
+                        <label for="password">Password</label>
+                        <span class="strength-label">Strength: <span id="strength-text">None</span></span>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="••••••••" required>
+                        <button type="button" id="toggle-password" class="icon toggle-btn">👁️</button>
+                    </div>
+                    <div class="strength-meter">
+                        <div id="strength-bar" class="strength-bar"></div>
+                    </div>
+                </div>
+
+                <button type="submit" id="sign-in-btn" class="glow-btn">Sign In</button>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember User Session</label>
+                </div>
+
+                <p class="switch-form">
+                    New user? <a href="#" id="go-to-signup">Create an account</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Logout / Dashboard Interface -->
+        <div id="logout-section" class="tech-card hidden">
+            <div class="dashboard-layout">
+                <div class="user-profile">
+                    <div class="avatar">👤</div>
+                    <h3 id="dashboard-username">Welcome, User</h3>
+                    <small>User Session Active</small>
+                </div>
+                <div class="session-info">
+                    <h2>Security / End Session</h2>
+                    <p>Logout warning: Confirm below to end your secure session and terminate access.</p>
+                    <button id="logout-btn" class="glow-btn outline">LOG OUT SECURELY ➔</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
